@@ -1,0 +1,555 @@
+html , body {
+  
+}
+#support {
+  margin-top: 100px;
+}
+
+.contact-page {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.contact-page-title {
+  position: relative;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.back-title {
+  text-align: center;
+  -webkit-text-stroke: 2px #ffffff12;
+  color: transparent;
+  font-size: 110px;
+  letter-spacing: 6px;
+}
+
+.front-title {
+  color: #f1f1f1;
+  font-weight: 900;
+  font-size: 50px;
+  transform: translateY(-95px);
+}
+
+.front-title span {
+  color: #2c55b2;
+}
+
+.contact-boxes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  gap: 10px;
+}
+
+.contact-box {
+  flex: 1 1 calc(33.333% - 20px);
+  background-color: #00000078;
+  padding: 20px;
+  border-radius: 3px;
+  border-left: 2px solid #2c55b2;
+  width: 100%;
+  backdrop-filter: blur(10px);
+  --webkit-filter: blur(10px);
+  max-width: 360px;
+  margin-bottom: 40px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateY(-70px);
+  animation: popTop 0.5s forwards;
+  
+}
+
+
+
+.contact-box:nth-child(1) {
+  animation: slideRight 0.5s forwards; 
+  animation-delay: 0.2s; /* Delay before starting (faster) */
+}
+
+.contact-box:nth-child(2) {
+  animation: slideUp 0.5s forwards;
+  animation-delay: 0.4s; /* Delay before starting (faster) */
+}
+
+.contact-box:nth-child(3) {
+  animation: slideLeft 0.5s forwards;
+  animation-delay: 0.6s; /* Delay before starting (faster) */
+}
+
+
+.contact-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(70px);
+  animation: popTop 0.30s forwards; /* No delay here */
+}
+
+input, textarea {
+  opacity: 0;
+  transform: translateY(70px);
+  animation: popTop 0.5s 0.4s forwards; /* Same delay as form animation */
+}
+
+
+input {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #00000078;
+  padding: 14px;
+  backdrop-filter: blur(10px);
+  --webkit-filter: blur(10px);
+  color: #fff;
+  border: 0;
+}
+
+textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  background: #00000078;
+  backdrop-filter: blur(10px);
+  --webkit-filter: blur(10px);
+  padding: 14px;
+  color: #fff;
+  border: 0;
+  resize: none;
+  height: 160px;
+}
+
+input::placeholder {
+  color: #888;
+}
+
+.inline-inputs {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nameInput,
+.emailInput {
+  width: calc(50% - 5px);
+}
+
+.nameInput {
+  border-top-left-radius: 10px;
+}
+
+.emailInput {
+  border-top-right-radius: 10px;
+}
+
+.sendbtn {
+  background-color: #2c55b2;
+  border-radius: 0 0 10px 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.5s linear;
+}
+
+.sendbtn:hover {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-box {
+    max-width: 100%;
+  }
+
+  .nameInput,
+  .emailInput {
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .nameInput {
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+#about body {
+  background-size: 100%;
+  background-position: center;
+  z-index: 1;
+}
+
+#about .container {
+  width: 1400px;
+  height: 100px !important;
+  margin: 200px auto;
+  z-index: 1;
+}
+
+#about .glass {
+  position: relative;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  --webkit-filter: blur(10px);
+  border-radius: 20px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  z-index: 1;
+  overflow: hidden;
+}
+
+#about .about-txt {
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 100px;
+  margin-right: 100px;
+  z-index: 1;
+}
+
+.disk.orange {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #2c55b2;
+  position: absolute;
+  top: -50px;
+  right: -50px;
+  z-index: -1;
+  animation: bounceDisk 2s linear infinite;
+}
+
+.disk.white {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  position: absolute;
+  bottom: -50px;
+  left: -50px;
+  z-index: -1;
+  animation: bounceDisk 2s linear infinite;
+}
+
+@keyframes bounceDisk {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Light mode styles */
+body.light-mode .contact-box {
+  background-color: #ffffff78;
+  border-left: 2px solid #2c55b2;
+  color: #000;
+}
+
+body.light-mode .box-title {
+  color: #000;
+}
+
+body.light-mode .box-content {
+  color: #555;
+}
+
+body.light-mode input,
+body.light-mode textarea {
+  background: #ffffff78;
+  color: #000;
+}
+
+body.light-mode input::placeholder {
+  color: #555;
+}
+
+body.light-mode .sendbtn {
+  background-color: #2c55b2;
+  color: #fff;
+}
+
+body.light-mode .sendbtn:hover {
+  background-color: #333;
+}
+
+body.light-mode .front-title {
+  color: #000000;
+}
+
+body.light-mode .front-title span {
+  color: #2c55b2;
+}
+
+body.light-mode .back-title {
+  -webkit-text-stroke: 2px #00000012;
+}
+
+body.light-mode #about .about-txt {
+  color: #000;
+}
+
+/* Animations */
+@keyframes popTop {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* Add these media queries at the end of your existing CSS */
+
+/* Mobile devices (xs and sm) */
+@media screen and (max-width: 576px) {
+  .back-title {
+    font-size: 50px;
+    letter-spacing: 3px;
+  }
+
+  .front-title {
+    font-size: 24px;
+    transform: translateY(-45px);
+  }
+
+  .contact-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-box {
+    flex: 1 1 100%;
+    margin: 10px 0;
+    transform: translateY(0);
+  }
+
+  .inline-inputs {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .nameInput,
+  .emailInput {
+    width: 100%;
+  }
+
+  input, textarea {
+    padding: 10px;
+  }
+
+  textarea {
+    height: 120px;
+  }
+
+  #about .container {
+    width: 95%;
+    margin: 100px auto;
+  }
+
+  #about .about-txt {
+    margin: 20px;
+    font-size: 16px;
+  }
+
+  .disk.orange {
+    width: 150px;
+    height: 150px;
+  }
+
+  .disk.white {
+    width: 125px;
+    height: 125px;
+  }
+}
+
+/* Tablet devices (md) */
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .back-title {
+    font-size: 80px;
+  }
+
+  .front-title {
+    font-size: 36px;
+    transform: translateY(-70px);
+  }
+
+  .contact-boxes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-box {
+    flex: 1 1 100%;
+    max-width: 500px;
+    margin: 15px 0;
+  }
+
+  #about .container {
+    width: 90%;
+    margin: 150px auto;
+  }
+
+  #about .about-txt {
+    margin: 40px;
+    font-size: 16px;
+  }
+
+  .disk.orange {
+    width: 200px;
+    height: 200px;
+  }
+
+  .disk.white {
+    width: 175px;
+    height: 175px;
+  }
+}
+
+/* Medium devices (lg) */
+@media screen and (min-width: 769px) and (max-width: 992px) {
+  .back-title {
+    font-size: 90px;
+  }
+
+  .front-title {
+    font-size: 40px;
+    transform: translateY(-80px);
+  }
+
+  .contact-boxes {
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .contact-box {
+    flex: 1 1 calc(50% - 20px);
+    max-width: 400px;
+  }
+
+  #about .container {
+    width: 95%;
+    margin: 175px auto;
+  }
+
+  #about .about-txt {
+    margin: 60px;
+    font-size: 17px;
+  }
+}
+
+/* Large devices (xl) */
+@media screen and (min-width: 993px) and (max-width: 1200px) {
+  .contact-boxes {
+    gap: 15px;
+  }
+
+  .contact-box {
+    flex: 1 1 calc(33.333% - 20px);
+    max-width: 350px;
+  }
+
+  #about .container {
+    width: 1100px;
+  }
+}
+
+/* Adjust animations for mobile */
+@media screen and (max-width: 768px) {
+  .contact-box:nth-child(1),
+  .contact-box:nth-child(2),
+  .contact-box:nth-child(3) {
+    animation: popTop 0.5s forwards;
+    animation-delay: 0.2s;
+  }
+
+  @keyframes bounceDisk {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.3);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+/* Fix for very small devices */
+@media screen and (max-width: 320px) {
+  .back-title {
+    font-size: 40px;
+  }
+
+  .front-title {
+    font-size: 20px;
+    transform: translateY(-35px);
+  }
+
+  input, textarea {
+    padding: 8px;
+  }
+
+  #about .about-txt {
+    margin: 15px;
+    font-size: 14px;
+  }
+}
+
+/* Ensure proper spacing on all devices */
+@media screen and (max-width: 1200px) {
+  #support {
+    margin-top: 60px;
+  }
+  
+  .contact-page {
+    padding: 0 15px;
+  }
+}
+
+/* Fix form submission button on mobile */
+@media screen and (max-width: 576px) {
+  .sendbtn {
+    padding: 12px;
+    font-size: 14px;
+  }
+}
+
+/* Improve glass effect performance on mobile */
+@media screen and (max-width: 768px) {
+  .contact-box,
+  input,
+  textarea,
+  #about .glass {
+    backdrop-filter: blur(5px);
+    --webkit-filter: blur(5px);
+  }
+}

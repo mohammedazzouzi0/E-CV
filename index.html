@@ -1,0 +1,200 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="icon" href="../pictures/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../pictures/logo.png" type="image/x-icon">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">AHA</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li class="dropdown">
+                <a href="" class="dropbtn">Resume</a>
+                <div class="dropdown-content">
+                    <a href="./html/resume-azzouzi.html">Mohammed Azzouzi</a>
+                    <a href="./html/resume-amine.html">Amine Assou</a>
+                    <a href="./html/resume-himmi.html">Mohamed Himmi</a>
+                </div>
+            </li>
+            <li><a href="./html/contact.html">Contact</a></li>
+          
+            
+        </ul>
+        <!-- Add this inside your navbar, before the nav-links -->
+<div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+    </nav>
+
+    <section id="Welcoming" class="reveal">
+        
+
+        <div class="left-half">
+            <div>
+                <h1>Hi <span class="blue-text">there!</span></h1>
+                <p>Welcome to our <span class="blue-text">portfolio</span></p>
+            </div>
+            <p class="erasing-text" id="dynamicText"></p>
+        </div>
+<dotlottie-player src="https://lottie.host/008efbb4-5a86-4a4c-87e2-00aa945ec2e4/fhpn42CHRf.lottie" background="transparent" speed="1" style="width: 650px; height: 650px" loop autoplay></dotlottie-player>
+    </section>
+
+    <div class="cards-container reveal">
+        <div id="user-card" class="reveal">
+            <button id="email-button" onclick="sendEmailtoazzouzi()">
+                <svg
+                    id="mail-icon"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    height="24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect rx="2" y="4" x="2" height="16" width="20"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+            </button>
+            <div id="profile-picture"><img src="./pictures/azzouzi.JPG" /></div>
+            <div id="card-bottom">
+                <div id="content">
+                    <span id="username">AZZOUZI Mohammed</span>
+                    <span id="user-bio">
+                        <p>
+                            I completed an Integrated MSc in Computer Engineering from l’Université Privée de Fès.<br>
+                            When I’m not coding, you’ll find me :<br>
+                            Building and maintaining websites<br> 
+                            Exploring open-source projects<br>  
+                            
+                        </p>    
+                    </span>
+                </div>
+                <div id="social-section">
+                    <div id="social-links">
+                    </div>
+                    <a href="./html/resume-azzouzi.html">
+                      <button id="contact-button">More info</button>
+                  </a>
+                </div>
+            </div>
+        </div>
+
+
+        
+        <div id="user-card" class="reveal">
+            <button id="email-button" onclick="sendEmailtoassou()">
+                <svg
+                    id="mail-icon"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    height="24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect rx="2" y="4" x="2" height="16" width="20"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+            </button>
+            <div id="profile-picture"><img src="./pictures/amine.jpg" /></div>
+            <div id="card-bottom">
+                <div id="content">
+                    <span id="username">ASSOU Amine</span>
+                    <span id="user-bio">
+                        <p>
+                            I completed an Integrated MSc in Computer Engineering from l’Université Privée de Fès.<br>
+                            When I’m not coding, you’ll find me :<br>
+                            Building and maintaining websites<br> 
+                            Exploring open-source projects<br>  
+                            
+                        </p>    
+                    </span>
+                </div>
+                <div id="social-section">
+                    <div id="social-links">
+                    </div>
+                    <a href="./html/resume-amine.html">
+                      <button id="contact-button">More info</button>
+                  </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="user-card" class="reveal">
+            <button id="email-button" onclick="sendEmailtohimmi()">
+                <svg
+                    id="mail-icon"
+                    stroke-linejoin="round"
+                    stroke-linecap="round"
+                    stroke-width="2"
+                    stroke="currentColor"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    height="24"
+                    width="24"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <rect rx="2" y="4" x="2" height="16" width="20"></rect>
+                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                </svg>
+            </button>
+        
+            
+            <div id="profile-picture"><img src="./pictures/himmi.jpg" /></div>
+            <div id="card-bottom">
+                <div id="content">
+                    <span id="username">HIMMI Mohamed</span>
+                    <span id="user-bio">
+                        <p>
+                            I completed an Integrated MSc in Computer Engineering from l’Université Privée de Fès.<br>
+                            When I’m not coding, you’ll find me :<br>
+                            Building and maintaining websites<br> 
+                            Exploring open-source projects<br>  
+                            
+                        </p>    
+                    </span>
+                </div>
+                <div id="social-section">
+                    <div id="social-links">
+                    </div>
+                    <a href="./html/resume-himmi.html">
+                      <button id="contact-button">More info</button>
+                  </a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
+    
+    <button id="theme-toggle" title="Toggle Dark/Light Mode">🌑</button>
+    <script src="./script/script.js"></script>
+    <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+    
+    
+</body>
+<footer>
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+          <h2>AHA</h2>
+        </div>
+        <h2>Online portfolio</h2>                  
+        <h4>Copyright © 2025 Assou&Azzouzi&Himmi. All rights reserved</h4>
+      </div>
+    </section>
+  </footer>
+</html>
+

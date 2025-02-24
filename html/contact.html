@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="../style/contact.css">
+    <link rel="icon" href="../pictures/logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../pictures/logo.png" type="image/x-icon">
+   
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">AHA</div>
+    <ul class="nav-links">
+      <li><a href="../index.html">Home</a></li>
+      <li class="dropdown">
+          <a href="" class="dropbtn">Resume</a>
+          <div class="dropdown-content">
+              <a href="./resume-azzouzi.html">Mohammed Azzouzi</a>
+              <a href="./resume-amine.html">Amine Assou</a>
+              <a href="./resume-himmi.html">Mohamed Himmi</a>
+          </div>
+      </li>
+      <li><a href="./contact.html">Contact</a></li>
+      
+  </ul>
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</nav>
+<section id="support">
+  <div class="contact-page">
+      <h1 class="contact-page-title">
+          <div class="back-title">Contact</div>
+          <div class="front-title">Get In <span>Touch</span></div>
+      </h1>
+
+      <div class="contact-boxes">
+          <div class="contact-box">
+              <h2 class="box-title">Location</h2>
+              <div class="box-content">
+                  Lotissement Quaraouiyine <br>Route Ain Chkef,  <br>
+                  Fès 30000
+              </div>
+          </div>
+          <div class="contact-box">
+              <h2 class="box-title">Email</h2>
+              <div class="box-content">
+                  aha.support@gmail.com
+              </div>
+          </div>
+          <div class="contact-box">
+              <h2 class="box-title">Phone</h2>
+              <div class="box-content">
+                  +212 666-666666
+              </div>
+          </div>
+      </div>
+
+      <form action="http://localhost:3000/send-message" method="POST" class="contact-form">
+          <div class="inline-inputs">
+              <input type="text" name="name" class="nameInput" placeholder="Name" required>
+              <input type="email" name="email" class="emailInput" placeholder="Email" required>
+          </div>
+          <input type="text" name="phone" class="phoneInput" placeholder="Phone Number" required>
+          <input type="text" name="subject" class="subjectInput" placeholder="Subject" required>
+          <textarea name="message" class="msgArea" placeholder="Your Message" required></textarea>
+          <input type="submit" class="sendbtn" value="Send Message">
+      </form>
+  </div>
+</section>
+  <button id="theme-toggle" title="Toggle Dark/Light Mode">🌑</button>
+</body>
+
+<script src="../script/script.js"></script>
+
+</html>

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "i18next": "^24.2.0",
+    "node-polyglot": "^2.6.0"
+  }
+}
